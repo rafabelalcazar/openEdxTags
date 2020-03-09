@@ -1,10 +1,8 @@
 """TO-DO: Write a description of what this XBlock is."""
-
 import pkg_resources
 from xblock.core import XBlock
 from xblock.fields import Integer, Scope,JSONField
 from xblock.fragment import Fragment
-
 
 class ReglasXBlock(XBlock):
     """
@@ -25,8 +23,6 @@ class ReglasXBlock(XBlock):
         help="Array containing resource tagged information",
     )
 
-
-
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
         data = pkg_resources.resource_string(__name__, path)
@@ -40,7 +36,7 @@ class ReglasXBlock(XBlock):
         """
         html = self.resource_string("static/html/reglasxblock.html")
         frag = Fragment(html.format(self=self))
-        #frag.add_css(self.resource_string("static/css/reglasxblock1.css"))
+        frag.add_css(self.resource_string("static/css/reglasxblock.css"))
         frag.add_javascript(self.resource_string("static/js/src/reglasxblock.js"))
         frag.initialize_js('ReglasXBlock')
         return frag
@@ -53,7 +49,7 @@ class ReglasXBlock(XBlock):
         """
         html = self.resource_string("static/html/student_reglasxblock.html")
         frag = Fragment(html.format(self=self))
-        #frag.add_css(self.resource_string("static/css/reglasxblock1.css"))
+        frag.add_css(self.resource_string("static/css/student_reglasxblock.css"))
         frag.add_javascript(self.resource_string("static/js/src/student_reglasxblock.js"))
         frag.initialize_js('StudentReglasXBlock')
         return frag

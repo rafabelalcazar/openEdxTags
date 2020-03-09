@@ -1,9 +1,6 @@
 /* Javascript for ReglasXBlock. */
 function ReglasXBlock(runtime, element) {
-
-
     var handlerUrl = runtime.handlerUrl(element, 'tag_resource');
-
     $('#send', element).click(function(eventObject) {
         var file = document.getElementById("myfile").value
         var selector = document.getElementById("selector")
@@ -13,7 +10,6 @@ function ReglasXBlock(runtime, element) {
                 console.log('btn clicked',tag);
             }
         }
-        
         $.ajax({
             type: "POST",
             url: handlerUrl,
@@ -29,7 +25,6 @@ function ReglasXBlock(runtime, element) {
             }
         });
     });
-
     $(function ($) {
         /* Here's where you'd do things on page load. */
     });
@@ -41,7 +36,6 @@ function agregarcontenido(a){
     btn.removeAttribute("disabled")
     document.getElementById("tipo_contenido").innerHTML = "";
     if(tipoagregacion=="pdf"){
-        
         codigo="<h3>Agregar pdf</h3>"+
         "<form action=\'\'>"+ 
         "<label for=\'myfile\'>Seleccionar pdf:</label>"+
@@ -58,18 +52,12 @@ function agregarcontenido(a){
         "    </select>"+
         "</div>"+
         "</form>";
-
         console.log(codigo)
-        
-         document.getElementById("agregarcontenido").innerHTML = codigo;
-
+        document.getElementById("agregarcontenido").innerHTML = codigo;
     }
     if(tipoagregacion=="video"){
         document.getElementById("agregarcontenido").innerHTML = "<h3>Agregar video</h3>";
-        
-
     }
     if(tipoagregacion=="html"){}
     if(tipoagregacion=="discusion"){}
-    
 }

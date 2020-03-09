@@ -1,8 +1,6 @@
 /* Javascript for ReglasXBlock. */
 function StudentReglasXBlock(runtime, element) {
-
     var handlerUrl = runtime.handlerUrl(element, 'show_resources');
-
 
     $('#send_aprendizaje', element).click(function(eventObject) {
         // var file = document.getElementById("myfile").value
@@ -13,8 +11,6 @@ function StudentReglasXBlock(runtime, element) {
                 console.log('Seleccionaste: ',tag);
             }
         }
-
-        
         $.ajax({
             type: "POST",
             url: handlerUrl,
@@ -25,9 +21,7 @@ function StudentReglasXBlock(runtime, element) {
                 resources_list.innerHTML = ''
                 resources_allowed = data.filter(resources =>  resources.tag == tag  )
                 console.log(resources_allowed);
-                
                 resources_list.innerHTML = "Tus recursos disponibles son :"+resources_allowed.map(item => item.resource )
-
             }
         });
     });

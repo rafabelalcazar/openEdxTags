@@ -1,13 +1,10 @@
 /* CSS for ReglasXBlock */
-
 .reglasxblock_block .count {
     font-weight: bold;
 }
-
 .reglasxblock_block p {
     cursor: pointer;
 }
-
 #nota-importante span{
     font-weight: bolder;
 }
