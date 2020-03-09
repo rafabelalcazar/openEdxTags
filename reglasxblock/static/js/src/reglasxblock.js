@@ -2,7 +2,7 @@
 function ReglasXBlock(runtime, element) {
 
 
-    var handlerUrl = runtime.handlerUrl(element, 'increment_count');
+    var handlerUrl = runtime.handlerUrl(element, 'tag_resource');
 
     $('#send', element).click(function(eventObject) {
         var file = document.getElementById("myfile").value
