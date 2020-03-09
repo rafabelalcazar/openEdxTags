@@ -1,0 +1,1 @@
+from .reglasxblock import ReglasXBlock

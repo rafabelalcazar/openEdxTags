@@ -1,0 +1,13 @@
+setup.py
+reglasxblock/__init__.py
+reglasxblock/reglasxblock.py
+reglasxblock/static/README.txt
+reglasxblock/static/css/reglasxblock.css
+reglasxblock/static/html/reglasxblock.html
+reglasxblock/static/js/src/reglasxblock.js
+reglasxblock_xblock.egg-info/PKG-INFO
+reglasxblock_xblock.egg-info/SOURCES.txt
+reglasxblock_xblock.egg-info/dependency_links.txt
+reglasxblock_xblock.egg-info/entry_points.txt
+reglasxblock_xblock.egg-info/requires.txt
+reglasxblock_xblock.egg-info/top_level.txt
