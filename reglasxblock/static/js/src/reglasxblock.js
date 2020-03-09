@@ -17,8 +17,16 @@ function ReglasXBlock(runtime, element) {
         $.ajax({
             type: "POST",
             url: handlerUrl,
-            data: JSON.stringify({"tag": tag}),
-            // success: 
+            data: JSON.stringify({
+                "tag": tag,
+                "resource":file
+        }),
+            success: function(data){
+                var showInfoResource = document.getElementById('info-resource')
+                showInfoResource.innerHTML = ''
+                showInfoResource.innerHTML =JSON.stringify(data.tag)
+
+            }
         });
     });
 
