@@ -46,10 +46,11 @@ class ReglasXBlock(XBlock):
         An example handler, which increments the data.
         """
         # Just to show data coming in...
-        assert data['hello'] == 'world'
+        # assert data['hello'] == 'world'
+        print(data)
 
-        self.count += 1
-        return {"count": self.count}
+        # self.count += 1
+        return {"tag": data}
 
     # TO-DO: change this to create the scenarios you'd like to see in the
     # workbench while developing your XBlock.

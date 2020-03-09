@@ -10,18 +10,16 @@ function ReglasXBlock(runtime, element) {
         for(var i=0; i< selector.length;i++){
             if (selector[i].selected===true){
                 var tag = selector[i].value
-
                 console.log('btn clicked',tag);
             }
-
         }
         
-        // $.ajax({
-        //     type: "POST",
-        //     url: handlerUrl,
-        //     data: JSON.stringify({"hello": "world"}),
-        //     // success: 
-        // });
+        $.ajax({
+            type: "POST",
+            url: handlerUrl,
+            data: JSON.stringify({"tag": tag}),
+            // success: 
+        });
     });
 
     $(function ($) {
